@@ -1,31 +1,31 @@
 package com.baeldung.struts;
 
-public class CarAction {
+public class Car {
 
-    private String carName;
-    private String carMessage;
-    private CarMessageService carMessageService = new CarMessageService();
+    private String Name;
+    private String Message;
+    private CarMessageService MessageService = new MessageService();
 
     public String execute() {
-        System.out.println("inside execute(): carName is" + carName);
-        this.setCarMessage(this.carMessageService.getMessage(carName));
+        System.out.println("inside execute(): car Name is" + Name);
+        this.setMessage(this.MessageService.getMessage(Name));
         return "success";
     }
 
-    public String getCarName() {
+    public String getName() {
         return carName;
     }
 
-    public void setCarName(String carName) {
+    public void setName(String Name) {
         this.carName = carName;
     }
 
-    public String getCarMessage() {
-        return carMessage;
+    public String getMessage() {
+        return Message;
     }
 
-    public void setCarMessage(String carMessage) {
-        this.carMessage = carMessage;
+    public void setMessage(String Message) {
+        this.Message = Message;
     }
 
 }
